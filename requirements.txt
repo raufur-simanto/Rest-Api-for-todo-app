@@ -1,0 +1,6 @@
+flask
+python-dotenv
+Flask-SQLAlchemy
+Flask-migrate
+psycopg2-binary
+flask-restx
