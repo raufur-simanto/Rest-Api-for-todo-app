@@ -4,6 +4,7 @@ FROM python:3.10-slim-buster
 # set working directory
 WORKDIR /usr/app
 
+
 # copy and install necessary dependencies
 COPY requirements.txt .
 RUN pip install -r requirements.txt
