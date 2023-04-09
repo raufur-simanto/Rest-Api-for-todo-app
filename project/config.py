@@ -8,11 +8,11 @@ postgresql://user:pwd@host:port/db_name
 
 import os
 
-
 class BaseConfig:
     db_name = 'my_db'
-    user = os.getenv('POSTGRES_USER')
-    password = os.getenv('POSTGRES_PASSWORD')
-    port = '5433'
+    user = os.environ.get('POSTGRES_USER', 'postgres')
+    password = os.getenv('POSTGRES_PASSWORD', 'simanto')
+    port = '5432'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        f'postgresql://{user}:{password}@localhost:{port}/{db_name}'
+        f'postgresql://{user}:{password}@postgres_db:{port}/{db_name}'
+    
