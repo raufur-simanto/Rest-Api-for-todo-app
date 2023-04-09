@@ -20,6 +20,6 @@
 
 ### Connecting postgres
 - docker exec -it <db_container> sh
-- psql -h <db_server> -U <username>
+- psql -h <db_server> -u <db_username>
 
 
